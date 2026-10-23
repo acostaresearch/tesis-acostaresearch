@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+rutas-acosta.json
+*.docx
+*.pdf
+*.zip
+asesorar/trabajos/
