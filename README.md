@@ -28,6 +28,19 @@ Las rutas también se pueden fijar con las variables `ACOSTA_TURNITIN`, `ACOSTA_
 
 La clave de Scopus (si se usa `--scopus`) se toma de la variable de entorno `ELSEVIER_API_KEY`.
 
+## Las carpetas de clientes (por Google Drive, no por GitHub)
+
+`tesis-turnitin` y `tesis-asesorar` pesan GB y llevan datos personales: no van a GitHub. Se comparten
+con **Google Drive para escritorio** en modo **«Reflejar archivos»** (así los archivos están de verdad
+en el disco y los scripts de Python los leen sin problema):
+
+1. En cada PC: instalar Google Drive para escritorio, con la misma cuenta, y activar «Reflejar archivos».
+2. En la PC con el trabajo: mover `tesis-turnitin` y `tesis-asesorar` a una carpeta `asesoria-acosta`
+   dentro de Mi unidad y esperar a que termine de subir.
+3. En cada PC: `python instalar.py --base "G:\Mi unidadsesoria-acosta"` (la letra de la unidad puede cambiar).
+
+No se trabaja el mismo cliente en las dos PC a la vez: Drive crearía copias en conflicto.
+
 ## Mantenerlo al día
 
 Las skills se editan donde están instaladas (`~/.claude/skills`). Para subir los cambios:
